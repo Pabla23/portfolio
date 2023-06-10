@@ -2,9 +2,9 @@
 
 function Contact() {
     return (
-      <div className="contact" id="contact">
+      <section className="contact" id="contact">
         <h1>Contact</h1>
-      </div>
+      </section>
     );
   }
 
