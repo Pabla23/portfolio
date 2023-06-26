@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
@@ -6,4 +10,12 @@ body {
 a {
     text-decoration: none;
     font-weight: 700;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.home-content, .about-content, .projects-content, .contact-content {
+    padding: 0 1.5rem;
 }

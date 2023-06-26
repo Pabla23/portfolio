@@ -1,10 +1,15 @@
 
 
-function Projects() {
+function Projects({restData, isLoaded}) {
     return (
-      <section className="projects" id="projects">
-        <h1>Projects</h1>
-      </section>
+      isLoaded ?
+        <section className="projects" id="projects">
+        <div className="projects_content">
+          <h2>{restData.acf['projects_header']}</h2>
+          <p>{restData.acf['projects_text']}</p>
+        </div>
+        </section>
+      : null
     );
   }
 

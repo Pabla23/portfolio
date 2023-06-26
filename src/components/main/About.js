@@ -1,10 +1,15 @@
 
 
-function About() {
+function About({restData, isLoaded}) {
     return (
-      <section className="about" id="about">
-        <h1>About</h1>
-      </section>
+      isLoaded ?
+        <section className="about" id="about">
+        <div className="about-content">
+          <h2>{restData.acf['about_header']}</h2>
+          <p>{restData.acf['about_text']}</p>
+        </div>
+        </section>
+      : null
     );
   }
 
