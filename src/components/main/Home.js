@@ -1,6 +1,6 @@
+import { featuredImage } from "../../globals/globals";
 
-
-function Home({restData, isLoaded, featuredImage}) {
+function Home({restData, isLoaded}) {
 
   return (
     isLoaded ?

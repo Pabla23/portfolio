@@ -1,3 +1,13 @@
 footer {
     margin-bottom: 5.5rem;
 }
+
+@media (min-width: 1100px) {
+    footer {
+        grid-column: 2;
+        position: fixed;
+        bottom: 1rem;
+        right: 0;
+        width: 33.3%;
+    }
+}

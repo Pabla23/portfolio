@@ -3,8 +3,9 @@ import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { useEffect, useState } from "react";
+import { restBase } from "../../globals/globals";
 
-function Main({restBase, featuredImage}) {
+function Main() {
 
   const restPath = restBase + "/pages/2?_embed";
   const [restData, setData] = useState([]);
@@ -25,12 +26,14 @@ function Main({restBase, featuredImage}) {
   }, [restPath])
 
   return (
-    <div className="section-wrapper">
-      <Home restData = {restData} isLoaded = {isLoaded} featuredImage = {featuredImage}/>
-      <About restData = {restData} isLoaded = {isLoaded}/>
-      <Projects restData = {restData} isLoaded = {isLoaded}/>
-      <Contact restData = {restData} isLoaded = {isLoaded}/>
-    </div>
+    <main>
+      <div className="section-wrapper">
+        <Home restData = {restData} isLoaded = {isLoaded}/>
+        <About restData = {restData} isLoaded = {isLoaded}/>
+        <Projects restData = {restData} isLoaded = {isLoaded}/>
+        <Contact restData = {restData} isLoaded = {isLoaded}/>
+      </div>
+    </main>
   );
 }
 

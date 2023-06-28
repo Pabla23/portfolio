@@ -1,7 +1,9 @@
+import { currentYear, author } from "../globals/globals";
+
 function Footer() {
     return (
         <footer>
-            <p>This is the footer</p>
+            <p>&copy; {currentYear} {author}</p>
         </footer>
     );
   }

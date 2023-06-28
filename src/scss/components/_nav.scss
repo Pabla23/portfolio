@@ -24,7 +24,6 @@
         text-align: center;
         text-decoration: none;
         background-color: #fff;
-        border: none;
         border-radius: 5px 5px 0 0;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24);
         transition: background-color 0.3s ease;
@@ -37,7 +36,7 @@
         &.active {
             background-color: #e0e0e0;
             transform: translateY(2px);
-            height: 101%;
+            height: 100%;
         }
 
         a {
@@ -55,12 +54,68 @@
     margin: 0.7rem auto 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
+    
+    .main-nav {
+        position: fixed;
+        top: 30%;
+        bottom: initial;
+        left: initial;
+        right: initial;
+        width: 33.3%;
+    }
+
     .nav-menu {
+        display: block;
+
         li {
+            height: auto;
+            width: auto;
+            box-shadow: none;
+
             &:hover, :focus {
-                background-color: #5887ff;
+                transform: translateY(0);
+            }
+
+            a {
+                font-size: 2rem;
+                padding: 2rem 0;
+                transition: color 0.3s ease;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 1rem;
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.2s ease;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
+
+            &.active {
+                background-color: transparent;
+                height: auto;
+                transform: translateY(0);
+                a {
+                    color: #5877FF;
+                }
+                &::after {
+                    transform: scaleX(1);
+                }
             }
         }
+    }
+
+    .menu-icon {
+        margin: 0;
+        display: none;
     }
 }
