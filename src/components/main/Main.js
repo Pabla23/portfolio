@@ -4,10 +4,12 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import { useEffect, useState } from "react";
 import { restBase } from "../../globals/globals";
+import AOS from "aos";
+import "../../aos/aos.css";
 
 function Main() {
 
-  const restPath = restBase + "/pages/2?_embed";
+  const restPath = restBase + "/pages/2?acf_format=standard";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -24,6 +26,12 @@ function Main() {
     }
     fetchData()
   }, [restPath])
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   return (
     <main>

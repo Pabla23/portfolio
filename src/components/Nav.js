@@ -38,6 +38,7 @@ function Nav() {
   }, []);
 
   return (
+    window.location.pathname === '/' && (
     <nav className='main-nav'>
       <ul className="nav-menu">
         <li className={activeSectionIndex === 0 ? 'active' : ''}>
@@ -66,6 +67,7 @@ function Nav() {
         </li>
       </ul>
     </nav>
+    )
   );
 }
 

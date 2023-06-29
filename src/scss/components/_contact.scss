@@ -1,11 +1,13 @@
 .contact {
-    height: 86vh;
+    height: 80vh;
 }
 
 .home {
     height: 100vh;
 }
 
-.projects {
-    height: 100vh;
+@media (min-width: 1100px) {
+    .contact {
+        height: 100vh;
+    }
 }
