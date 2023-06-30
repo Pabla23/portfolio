@@ -21,22 +21,22 @@ export const featuredImage = ( featuredImageObject ) => {
     return {__html: img}
 };
 
-//for the acf images
+//for acf image gallery field
 export const acfImageHTML = ( data ) => {
-    let imgURL = data.acf.idea_image.url;
-    let imgWidth = data.acf.idea_image.width;
-    let imgHeight = data.acf.idea_image.height;
-    let imgAlt = data.acf.idea_image.alt;
+    let imgURL = data.url;
+    let imgWidth = data.width;
+    let imgHeight = data.height;
+    let imgAlt = data.alt;
     
     let img = `<img src="${imgURL}" 
         width="${imgWidth}"
         height="${imgHeight}"
         alt="${imgAlt}"
         srcset="${imgURL} ${imgWidth}w,
-          ${data.acf.idea_image.sizes.large ? data.acf.idea_image.sizes.large + ' 1024w,' : ''}
-          ${data.acf.idea_image.sizes.medium_large ? data.acf.idea_image.sizes.medium_large + ' 768w,' : ''}
-          ${data.acf.idea_image.sizes.medium ? data.acf.idea_image.sizes.medium + ' 300w' : ''}"
+          ${data.sizes.large ? data.sizes.large + ' 1024w,' : ''}
+          ${data.sizes.medium_large ? data.sizes.medium_large + ' 768w,' : ''}
+          ${data.sizes.medium ? data.sizes.medium + ' 300w' : ''}"
         sizes="(max-width: ${imgWidth}px) 100vw, ${imgWidth}px">`;
     
     return {__html: img};
-};
+}

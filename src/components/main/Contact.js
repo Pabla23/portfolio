@@ -1,3 +1,4 @@
+import { acfImageHTML } from "../../globals/globals";
 
 
 function Contact({restData, isLoaded}) {
@@ -7,6 +8,7 @@ function Contact({restData, isLoaded}) {
           <div className="contact-content">
             <h2>{restData.acf['contacts_header']}</h2>
             <p>{restData.acf['contacts_text']}</p>
+            <figure dangerouslySetInnerHTML={acfImageHTML(restData.acf.working_image)}></figure>
           </div>
         </section>
       : null

@@ -5,6 +5,17 @@
     right: 0;
     background-color: transparent;
     z-index: 100;
+    //make this fade in on page load
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .nav-menu {

@@ -29,10 +29,13 @@ function Projects({restData, isLoaded}) {
         <div className="projects_content">
           <h2>{restData.acf['projects_header']}</h2>
           <p>{restData.acf['projects_text']}</p>
+
           <div className="projects_grid">
+
             {isLoadedCPT ? restDataCPT.map((item, index) => {
+
               return (
-                <div className="project" key={index}>
+                <div className={`project p${item.id}`} key={index}>
                   <Link to={`/project/${item.slug}`}>
                     <figure className="featured_image" dangerouslySetInnerHTML={featuredImage(item._embedded['wp:featuredmedia'][0])}></figure>
                     <div className="project_info">
@@ -43,6 +46,7 @@ function Projects({restData, isLoaded}) {
                 </div>
               )
             }) : null}
+
           </div>
         </div>
       </section>
