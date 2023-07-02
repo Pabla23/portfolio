@@ -3,11 +3,13 @@ import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { useEffect, useState } from "react";
-import { restBase } from "../../globals/globals";
+import { restBase, appTitle } from "../../globals/globals";
 import AOS from "aos";
 import "../../aos/aos.css";
 
 function Main() {
+
+  document.title = `${appTitle + " | Portfolio"}`;
 
   const restPath = restBase + "/pages/2?acf_format=standard";
   const [restData, setData] = useState([]);

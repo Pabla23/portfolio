@@ -1,10 +1,12 @@
 export const author = 'Dilraj Pabla';
 
+export const appTitle = 'Dilraj';
+
 export const currentYear = new Date().getFullYear();
 
 export const restBase = 'https://dillyp.com/portfolio/wp-json/wp/v2';
 
-//for the featured images
+//for the featured images and ACF gallery field
 export const featuredImage = ( featuredImageObject ) => {
     let imgWidth = featuredImageObject.media_details.sizes.full.width;
     let imgHeight = featuredImageObject.media_details.sizes.full.height;

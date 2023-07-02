@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { restBase } from "../../globals/globals";
-import { featuredImage } from "../../globals/globals";
+import { restBase, featuredImage } from "../../globals/globals";
 import { Link } from "react-router-dom";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -10,6 +9,8 @@ function Projects({restData, isLoaded}) {
   const restPath = restBase + "/posts?_embed";
   const [restDataCPT, setData] = useState([]);
   const [isLoadedCPT, setLoadStatus] = useState(false);
+
+  const [isMobile, setMobile] = useState(window.innerWidth < 1200);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +29,13 @@ function Projects({restData, isLoaded}) {
   //reverse the order of the array
   const restDataAdjusted = restDataCPT.slice().reverse();
 
-  const isMobile = window.innerWidth <= 700;
+  //check if mobile useEffect
+  useEffect(() => {
+    function handleResize() {
+      setMobile(window.innerWidth < 1200);
+    }
+    window.addEventListener('resize', handleResize)
+  })
 
   return (
     isLoaded ?
