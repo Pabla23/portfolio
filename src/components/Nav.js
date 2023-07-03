@@ -7,34 +7,29 @@ import contactIcon from '../images/contact.svg';
 function Nav() {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
 
+  // add active class to nav menu item when section is in view (scrolling)
   useEffect(() => {
-
-    // Update the nav menu when the user scrolls
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY;
+      const aboutElement = document.querySelector('#about');
 
-      let activeSectionIndex = 0;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        // distance from top of the page to the top of the section
-        const offsetTop = section.offsetTop;
-        // height of the section
-        const sectionHeight = section.offsetHeight;
-
-        // if the user has scrolled past half of the next section
-        if (scrollTop >= offsetTop - sectionHeight / 2) {
-          activeSectionIndex = i;
-          break;
-        }
+      if (aboutElement) {
+        const offsetTop = aboutElement.offsetTop / 2;
+        const sectionHeight = aboutElement.clientHeight;
+        const activeIndex = Math.floor((scrollTop - offsetTop) / sectionHeight) + 1;
+        setActiveSectionIndex(activeIndex);
       }
-
-      setActiveSectionIndex(activeSectionIndex);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    if (window.location.pathname === '/') {
+      window.addEventListener('scroll', handleScroll);
+    }
 
+    return () => {
+      if (window.location.pathname === '/') {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
   }, []);
 
   return (
