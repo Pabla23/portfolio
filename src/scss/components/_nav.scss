@@ -5,7 +5,7 @@
     right: 0;
     background-color: transparent;
     z-index: 100;
-    animation: fadeIn 2s ease;
+    animation: fadeIn 2.4s ease;
 }
 
 @keyframes fadeIn {
@@ -21,7 +21,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    height: 5.5rem;
+    height: 5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     
@@ -33,25 +33,30 @@
         align-items: center;
         text-align: center;
         text-decoration: none;
-        background-color: #fff;
+        background-color: var(--color-tertiary);
         border-radius: 5px 5px 0 0;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24);
-        transition: background-color 0.3s ease;
         transition: transform 0.2s ease;
 
-        &:hover, :focus {
-            transform: translateY(2px);
-        }
-
         &.active {
-            background-color: #e0e0e0;
+            background-color: var(--color-secondary);
             transform: translateY(2px);
             height: 100%;
+            a {
+                color: #000;
+                .st0 {
+                    stroke: #000;
+                    stroke-width: 12.2;
+                }
+                .st1 {
+                    stroke: #000;
+                }
+            }
         }
 
         a {
             font-size: 1.1rem;
-            color: black;
+            color: #fff;
             width: 100%;
             height: 100%;
         }
@@ -68,23 +73,31 @@
     
     .main-nav {
         position: fixed;
-        top: 30%;
-        bottom: initial;
+        top: 0;
+        bottom: 52%;
         left: initial;
         right: initial;
         width: 33.3%;
+        height: 100vh;
+        background-color: var(--color-tertiary);
     }
 
     .nav-menu {
         display: block;
+        position: relative;
+        top: 26.1%;
 
         li {
             height: auto;
             width: auto;
             box-shadow: none;
+            border-radius: 0;
 
             &:hover, :focus {
                 transform: translateY(0);
+                a {
+                    color: var(--color-tertiary);
+                }
             }
 
             a {
@@ -97,10 +110,11 @@
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: 1rem;
+                bottom: 0;
                 width: 100%;
-                height: 2px;
-                background-color: black;
+                height: 100%;
+                z-index: -1;
+                background-color: var(--color-secondary);
                 transform: scaleX(0);
                 transform-origin: left;
                 transition: transform 0.2s ease;
@@ -111,11 +125,10 @@
             }
 
             &.active {
-                background-color: transparent;
                 height: auto;
                 transform: translateY(0);
                 a {
-                    color: #5877FF;
+                    color: var(--color-tertiary);
                 }
                 &::after {
                     transform: scaleX(1);

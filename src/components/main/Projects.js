@@ -39,7 +39,7 @@ function Projects({restData, isLoaded}) {
 
   return (
     isLoaded ?
-      <section className="projects" id="projects" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-delay="200" data-aos-offset="0">
+      <section className="projects" id="projects" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-delay="200" data-aos-offset="100">
         <div className="projects_content">
           <h2>{restData.acf['projects_header']}</h2>
           <p>{restData.acf['projects_text']}</p>

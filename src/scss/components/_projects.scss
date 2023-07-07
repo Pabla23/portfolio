@@ -1,3 +1,7 @@
+.projects {
+    height: 92vh;
+}
+
 .project {
     max-width: 35rem;
     margin: 0 auto;
@@ -8,6 +12,10 @@
 }
 
 @media (min-width: 1200px) {
+    .projects {
+        height: 92vh;
+    }
+    
     .projects_grid {
         display: grid;
         justify-items: center;

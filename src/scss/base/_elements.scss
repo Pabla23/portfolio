@@ -5,6 +5,7 @@ html {
 body {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--color-secondary);
 }
 
 a {
@@ -18,7 +19,7 @@ h1, h2, h3 {
 }
 
 .home-content, .about-content, .projects_content, .contact-content {
-    padding: 0 1.5rem;
+    padding: 3rem 1.5rem;
 }
 
 @media (min-width: 1200px) {
@@ -30,5 +31,9 @@ h1, h2, h3 {
     header {
         grid-column: 2;
         display: block;
+    }
+
+    .home-content, .about-content, .projects_content, .contact-content {
+        padding: 3rem 2.5rem;
     }
 }

@@ -1,5 +1,8 @@
 //Imports
 
+//Variables
+@import "base/variables";
+
 //Reset
 @import "base/reset";
 
@@ -8,11 +11,12 @@
 
 //Components
 @import "components/nav";
-@import "components/contact";
+@import "components/home";
 @import "components/footer";
 @import "components/about";
 @import "components/projects";
 @import "components/single-project";
+@import "components/contact";
 
 //Misc
 @import "misc/utilities";

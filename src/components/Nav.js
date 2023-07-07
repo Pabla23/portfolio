@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import homeIcon from '../images/home.svg';
-import aboutIcon from '../images/about.svg';
-import projectsIcon from '../images/projects.svg';
-import contactIcon from '../images/contact.svg';
+//import svg as react component (not as image)
+import { ReactComponent as HomeIcon } from "../images/home.svg";
+import { ReactComponent as AboutIcon } from "../images/about.svg";
+import { ReactComponent as ProjectsIcon } from "../images/projects.svg";
+import { ReactComponent as ContactIcon } from "../images/contact.svg";
+
 
 function Nav() {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
@@ -38,25 +40,25 @@ function Nav() {
       <ul className="nav-menu">
         <li className={activeSectionIndex === 0 ? 'active' : ''}>
           <a href="#home">
-            <img className='menu-icon' src={homeIcon} alt="home" />
+            <HomeIcon className='menu-icon' />
             Home
           </a>
         </li>
         <li className={activeSectionIndex === 1 ? 'active' : ''}>
           <a href="#about">
-            <img className='menu-icon' src={aboutIcon} alt="about" />
+            <AboutIcon className='menu-icon' />
             About
           </a>
         </li>
         <li className={activeSectionIndex === 2 ? 'active' : ''}>
           <a href="#projects">
-            <img className='menu-icon' src={projectsIcon} alt="projects" />
+            <ProjectsIcon className='menu-icon' />
             Projects
           </a>
         </li>
         <li className={activeSectionIndex === 3 ? 'active' : ''}>
           <a href="#contact">
-            <img className='menu-icon' src={contactIcon} alt="contact" />
+            <ContactIcon className='menu-icon' />
             Contact
           </a>
         </li>

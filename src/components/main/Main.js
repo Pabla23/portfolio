@@ -31,7 +31,7 @@ function Main() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 1500,
     });
   }, []);
 
