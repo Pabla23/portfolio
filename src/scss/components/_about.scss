@@ -24,6 +24,9 @@
 
 .about-content {
     position: relative;
+    h3, h2 {
+        text-align: center;
+    }
 }
 
 .stack-wrapper {
@@ -143,8 +146,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        text-align: center;
         h2 {
-            font-size: 2rem;
             width: 100%;
             text-align: center;
             margin-bottom: 0.5rem;
@@ -194,12 +197,20 @@
     }
     
     .about-intro {
+        max-width: 960px;
+        margin: 0 auto;
         h2 {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
     }
 
     .stack-wrapper {
         margin: 3.5rem 0;
+    }
+}
+
+@media (min-width: 1450px) {
+    .stack-wrapper {
+        margin: 4rem;
     }
 }

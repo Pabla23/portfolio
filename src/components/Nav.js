@@ -9,17 +9,22 @@ import { ReactComponent as ContactIcon } from "../images/contact.svg";
 function Nav() {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
 
-  // add active class to nav menu item when section is in view (scrolling)
+  // add active class to nav menu when section is in view (scrolling)
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const aboutElement = document.querySelector('#about');
+      const aboutSection = document.querySelector('#about');
 
-      if (aboutElement) {
-        const offsetTop = aboutElement.offsetTop / 2;
-        const sectionHeight = aboutElement.clientHeight;
+      if (aboutSection) {
+        const offsetTop = aboutSection.offsetTop / 2;
+        const sectionHeight = (aboutSection.clientHeight) - 110;
+
         const activeIndex = Math.floor((scrollTop - offsetTop) / sectionHeight) + 1;
-        setActiveSectionIndex(activeIndex);
+        if (activeIndex > 3) {
+          setActiveSectionIndex(3);
+        } else {
+          setActiveSectionIndex(activeIndex);
+        }
       }
     };
 
@@ -70,7 +75,8 @@ function Nav() {
 
 export default Nav;
 
-//TESTS
+//TESTS copy/paste in useEffect if needed
 // console.log('scrollTop', scrollTop);
 // console.log('offsetTop', offsetTop);
 // console.log('sectionHeight', sectionHeight);
+// console.log('activeIndex', ((scrollTop - offsetTop) / sectionHeight) + 1);

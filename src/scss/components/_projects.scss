@@ -1,5 +1,9 @@
 .projects {
-    height: 92vh;
+    height: 100vh;
+}
+
+.projects_content {
+    text-align: center;
 }
 
 .project {
@@ -11,9 +15,72 @@
     }
 }
 
+//custom carousel styles
+.carousel-root {
+    max-width: 35rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    .carousel.carousel-slider {
+        overflow: initial;
+        .carousel-status {
+            color: var(--color-primary);
+            right: 0.8rem;
+        }
+        .control-dots {
+            bottom: initial;
+            top: -2.8rem;
+            .dot {
+                background: var(--color-primary);
+                width: 20%;
+                height: 0.1rem;
+                margin: 0 0.2rem;
+                border-radius: 0;
+                transition: height 0.15s ease;
+                &.selected {
+                    height: 0.3rem;
+                }
+            }
+        }
+        .control-prev.control-arrow {
+            padding-left: 0.8rem;
+            &:before {
+                border-right: 1rem solid var(--color-primary);
+            }
+        }
+        .control-next.control-arrow {
+            padding-right: 0.8rem;
+            &:before {
+                border-left: 1rem solid var(--color-primary);
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .project {
+        .project_info {
+            h3 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
 @media (min-width: 1200px) {
     .projects {
-        height: 92vh;
+        height: 100vh;
+    }
+
+    .projects_content {
+        h2 {
+            margin-bottom: 3rem;
+        }
+        p {
+            margin-bottom: 2.5rem;
+        }
     }
     
     .projects_grid {
@@ -28,11 +95,29 @@
         max-width: 95%;
         position: relative;
         .project_info{
+            padding: 2rem 0.5rem 0;
             position: absolute;
-            top: 0;
-            background-color: rgba(0, 0, 0, 0.8);
+            top: 0.25rem;
+            left: 0.5rem;
+            right: 0.5rem;
+            height: 69%;
+            background-color: rgba(0, 0, 0, 0.85);
             color: #fff;
             text-align: center;
+            display: none;
+            animation: fadeIn 0.2s ease-in-out;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+        &:hover {
+            .project_info {
+                display: block;
+            }
         }
     }
     
@@ -60,8 +145,19 @@
     }
 }
 
-@media (min-width: 1350px) {
+@media (min-width: 1325px) {
     .project {
-        max-width: 400px;
+        max-width: 447px;
+        .project_info {
+            padding-top: 3rem;
+        }
+    }
+}
+
+@media (min-width: 1450px) {
+    .project {
+        .project_info {
+            padding-top: 4rem;
+        }
     }
 }

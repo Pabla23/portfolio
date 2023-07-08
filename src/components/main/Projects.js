@@ -43,6 +43,7 @@ function Projects({restData, isLoaded}) {
         <div className="projects_content">
           <h2>{restData.acf['projects_header']}</h2>
           <p>{restData.acf['projects_text']}</p>
+          {isMobile ? <p>You can swipe left or right to see more, or use the arrows.</p> : null}
 
           {isMobile ? (
             <div className="projects_grid">

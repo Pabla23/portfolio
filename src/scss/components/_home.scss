@@ -1,10 +1,6 @@
-.content-image {
-    margin: 0 auto;
-}
-
 .home {
     position: relative;
-    height: 92vh;
+    height: 91vh;
 }
 
 .background {
@@ -16,8 +12,14 @@
     left: 0;
     z-index: -1;
     .content-image {
-        max-width: 490px;
-        margin-top: 3.5rem;
+        max-width: 350px;
+        margin: 0 auto;
+        // center the image vertically in the parent div position absolute is on the parent div
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
     }
 }
 
@@ -38,16 +40,6 @@
         position: relative;
         top: 14%;
         font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 410px) {
-    .home {
-        .background {
-            .content-image {
-                margin-top: 1.5rem;
-            }
-        }
     }
 }
 
