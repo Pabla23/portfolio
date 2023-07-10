@@ -13,6 +13,9 @@
         width: 100%;
         margin: 0;
     }
+    a {
+        color: var(--color-tertiary);
+    }
 }
 
 //custom carousel styles
@@ -102,11 +105,10 @@
             right: 0.5rem;
             height: 69%;
             background-color: rgba(0, 0, 0, 0.85);
-            color: #fff;
+            color: var(--color-secondary);
             text-align: center;
-            display: none;
-            animation: fadeIn 0.2s ease-in-out;
-
+            opacity: 0;
+            transition: opacity 0.15s ease;
             h3 {
                 font-size: 1.2rem;
             }
@@ -116,17 +118,8 @@
         }
         &:hover {
             .project_info {
-                display: block;
+                opacity: 1;
             }
-        }
-    }
-    
-    .posts-navigation {
-        a {
-            color: #000;
-        }
-        .active {
-            color: #5877FF;
         }
     }
     

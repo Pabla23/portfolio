@@ -7,12 +7,12 @@ import Project from './single/Project';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} /> {/* Route for the main component */}
-          <Route path="/project/:slug" element={<Project />} /> {/* Route for the single project component */}
+          <Route path="/" element={<Main />} />
+          <Route path="/project/:slug" element={<Project />} />
         </Routes>
         <Footer />
       </div>

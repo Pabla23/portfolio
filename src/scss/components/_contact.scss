@@ -13,21 +13,13 @@
   
 .btn-primary {
     background-color: #007bff;
-    color: #fff;
-    border: none;
+    color: var(--color-secondary);
     border-radius: 5px;
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
-  
+    border: none;
     &:hover {
-        box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
-    }
-  
-    &.copied {
-        animation: pulse 1s infinite;
-        animation-fill-mode: both;
+        box-shadow: 0 0 10px #007bff;
     }
 }
     

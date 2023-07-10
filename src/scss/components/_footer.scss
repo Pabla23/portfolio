@@ -2,6 +2,25 @@ footer {
     padding: 2rem 1.5rem 10rem;
     background-color: var(--color-tertiary);
     color: var(--color-secondary);
+    a {
+        font-size: 1.1rem;
+        svg {
+            position: relative;
+            width: 2rem;
+            height: 2rem;
+            margin: 0 0.4rem;
+            top: 0.3rem;
+            .st0 {
+                stroke: var(--color-secondary);
+            }
+        }
+        &:hover {
+            color: var(--color-primary);
+            .st0 {
+                stroke: var(--color-primary);
+            }
+        }
+    }
 }
 
 @media (min-width: 1200px) {
