@@ -4,17 +4,10 @@
 }
 
 .background {
-    position: absolute;
-    background-color: var(--color-primary);
-    right: 0;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    @include acf-images;
     .content-image {
         max-width: 350px;
         margin: 0 auto;
-        // center the image vertically in the parent div position absolute is on the parent div
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -32,7 +25,7 @@
         position: relative;
         top: 10%;
         font-size: 2.5rem;
-        color: var(--color-tertiary);
+        color: $tertiary;
     }
     .self-intro {
         max-width: 272px;

@@ -14,7 +14,7 @@
         margin: 0;
     }
     a {
-        color: var(--color-tertiary);
+        color: $tertiary;
     }
 }
 
@@ -26,14 +26,14 @@
     .carousel.carousel-slider {
         overflow: initial;
         .carousel-status {
-            color: var(--color-primary);
+            color: $primary;
             right: 0.8rem;
         }
         .control-dots {
             bottom: initial;
             top: -2.8rem;
             .dot {
-                background: var(--color-primary);
+                background: $primary;
                 width: 20%;
                 height: 0.1rem;
                 margin: 0 0.2rem;
@@ -47,13 +47,13 @@
         .control-prev.control-arrow {
             padding-left: 0.8rem;
             &:before {
-                border-right: 1rem solid var(--color-primary);
+                border-right: 1rem solid $primary;
             }
         }
         .control-next.control-arrow {
             padding-right: 0.8rem;
             &:before {
-                border-left: 1rem solid var(--color-primary);
+                border-left: 1rem solid $primary;
             }
         }
     }
@@ -105,7 +105,7 @@
             right: 0.5rem;
             height: 69%;
             background-color: rgba(0, 0, 0, 0.85);
-            color: var(--color-secondary);
+            color: $secondary;
             text-align: center;
             opacity: 0;
             transition: opacity 0.15s ease;

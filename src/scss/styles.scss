@@ -9,14 +9,22 @@
 //base
 @import "base/elements";
 
+//mixins
+@import "base/mixins";
+
+//Animations
+@import "base/animations";
+
 //Components
 @import "components/nav";
 @import "components/home";
 @import "components/footer";
 @import "components/about";
 @import "components/projects";
-@import "components/single-project";
 @import "components/contact";
+@import "components/single-project-nav";
+@import "components/single-project-prev-next-nav";
+@import "components/single-project";
 
 //Misc
 @import "misc/utilities";

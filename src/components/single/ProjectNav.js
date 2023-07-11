@@ -33,11 +33,11 @@ function ProjectNav({ restData, isLoaded }) {
 
     return (
         isLoaded &&
-        <div className="project-nav" onClick={handleNav}>
+        <div role="button" className="project-nav" onClick={handleNav}>
             <div className='dropdown'>
                 <div className='project-name'>{restData[0].title.rendered}</div>
             </div>
-            <nav className={isOpen ? 'options open' : 'options'}>
+            <nav role="navigation" className={isOpen ? 'options open' : 'options'}>
                 <NavLink to={`/project/capstone-project`}>Capstone Project</NavLink>
                 <NavLink to={`/project/movie-database`}>Movie Database</NavLink>
                 <NavLink to={`/project/php-myadmin-interface`}>PHP MyAdmin Interface</NavLink>

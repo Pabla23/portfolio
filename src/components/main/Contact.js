@@ -32,7 +32,7 @@ function Contact({restData, isLoaded}) {
         <div className="contact-content">
           <h2>{restData.acf['contacts_header']}</h2>
           <div className="contact-text" dangerouslySetInnerHTML={{__html: restData.acf['contacts_text']}}></div>
-          <button className={`btn-primary ${isCopied ? 'copied' : ''}`} onClick={copyEmail}>
+          <button className={`btn-primary${isCopied ? ' copied' : ''}`} onClick={copyEmail}>
             {isCopied ? 'Email Copied!' : 'Copy Email'}
           </button>
         </div>

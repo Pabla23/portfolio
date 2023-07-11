@@ -1,7 +1,12 @@
-:root {
-    --color-primary: #5877FF;
-    --color-secondary: #FFEAEC; //lavender blush
-    --color-tertiary: #22223B; //space cadet
-    --color-quaternary: #C0FDFB; //celeste
-}
+// colors
+$primary: #5877FF; //pastel blue
+$secondary: #FFEAEC; //lavender blush
+$tertiary: #22223B; //space cadet
+$quaternary: #C0FDFB; //celeste
+$quinary: #007BFF; //blue
 
+// button box shadow hover
+$shadow: 0 0 10px $quinary;
+
+// main site font
+$fonts: 'Outfit','Roboto', sans-serif;

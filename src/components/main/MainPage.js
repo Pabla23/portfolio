@@ -7,7 +7,7 @@ import { restBase, appTitle } from "../../globals/globals";
 import AOS from "aos";
 import "../../aos/aos.css";
 
-function Main() {
+function MainPage() {
 
   document.title = `${appTitle + " | Portfolio"}`;
 
@@ -47,4 +47,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default MainPage;

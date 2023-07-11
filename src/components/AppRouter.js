@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
-import Main from './main/Main';
+import MainPage from './main/MainPage';
 import Footer from './Footer';
-import Project from './single/Project';
+import ProjectPage from './single/ProjectPage';
 
-function App() {
+function AppRouter() {
   return (
     <Router basename="/">
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/project/:slug" element={<Project />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/project/:slug" element={<ProjectPage />} />
         </Routes>
         <Footer />
       </div>
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRouter;

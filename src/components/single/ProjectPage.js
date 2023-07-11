@@ -7,7 +7,7 @@ import { ReactComponent as HomeBtn } from "../../images/home-singleproject.svg";
 import { ReactComponent as GithubSVG } from "../../images/github.svg";
 
 
-function Project() {
+function ProjectPage() {
 
     const {slug} = useParams();
     const restPath = restBase + `/posts?_embed&slug=${slug}&acf_format=standard`;
@@ -38,6 +38,7 @@ function Project() {
         <div className="single-project">
               <header className="project-head">
                 <Link className="home-btn" to="/">
+                    <span className="sr-only">Back to home</span>
                     <HomeBtn/>
                 </Link>
                 <ProjectNav restData={restDataCPT} isLoaded={isLoadedCPT}/>
@@ -53,7 +54,7 @@ function Project() {
                 const planning = project.acf.project_planning;
 
                 return (
-                    <main key={key} className='content-wrapper'>
+                    <main key={key} className='content-wrapper' id={project.slug + project.id}>
 
                         <div className="project-content">
                           <h1>{project.title.rendered}</h1>
@@ -122,8 +123,8 @@ function Project() {
                               <GithubSVG/>
                             </a>
                           </section>
-                        </div>
                         <PrevNextProject project={project}/>                     
+                        </div>
                     </main>
                 )
             }) : null}
@@ -131,4 +132,4 @@ function Project() {
     )
 }
 
-export default Project
+export default ProjectPage

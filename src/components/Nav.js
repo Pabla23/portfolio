@@ -41,7 +41,7 @@ function Nav() {
 
   return (
     window.location.pathname === '/' && (
-    <nav className='main-nav'>
+    <nav className='main-nav' role="navigation">
       <ul className="nav-menu">
         <li className={activeSectionIndex === 0 ? 'active' : ''}>
           <a href="#home">

@@ -1,0 +1,49 @@
+.prev-next {
+    grid-column: 1;
+    grid-row: 7;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    div {
+        width: 100%;
+        position: relative;
+    }
+    .prev-wrapper {
+        grid-column: 1;
+    }
+    .next-wrapper {
+        grid-column: 2;
+    }
+    .prev-post {
+        width: 7.4rem;
+        display: block;
+        svg {
+            width: 7.4rem;
+            display: block;
+        }
+        span {
+            position: absolute;
+            font-size: 0.7rem;
+            left: 0;
+        }
+    }
+    .next-post {
+        position: absolute;
+        width: 5.9rem;
+        display: block;
+        right: 0;
+        svg {
+            margin: 0 0 0 auto;
+            width: 5.9rem;
+            height: 45px;
+            display: block;
+        }
+        span {
+            position: absolute;
+            font-size: 0.7rem;
+            right: 0;
+            width: 130px;
+            text-align: right;
+        }
+    }
+}

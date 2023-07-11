@@ -1,0 +1,49 @@
+@keyframes slide {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: -1920px 0;
+    }
+    50% {
+        background-position: -3840px 0;
+    }
+    75% {
+        background-position: -5760px 0;
+    }
+    100% {
+        background-position: -7680px 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes fadeInProject {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

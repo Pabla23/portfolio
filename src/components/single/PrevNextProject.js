@@ -11,19 +11,25 @@ function PrevNextProject({project}) {
     };
 
     return (
-        <nav className="prev-next nav">
+        <nav className="prev-next nav" role="navigation">
             {project.previous_post.title &&
-                <Link to={`/project/${project.previous_post['slug']}`} className="prev-post" onClick={linkClick}>
-                    <PrevBtn/>
-                    <span>{project.previous_post['title']}</span>
-                </Link>
+                <div className="prev-wrapper">
+                    <Link to={`/project/${project.previous_post['slug']}`} className="prev-post" onClick={linkClick}>
+                        <PrevBtn/>
+                        <span className="sr-only">Previous project</span>
+                        <span>{project.previous_post['title']}</span>
+                    </Link>
+                </div>
             }
 
             {project.next_post.id &&
-                <Link to={`/project/${project.next_post['slug']}`} className="next-post" onClick={linkClick}>
-                    <NextBtn/>
-                    <span>{project.next_post['title']}</span>
-                </Link>
+                <div className="next-wrapper">
+                    <Link to={`/project/${project.next_post['slug']}`} className="next-post" onClick={linkClick}>
+                        <NextBtn/>
+                        <span className="sr-only">Next project</span>
+                        <span>{project.next_post['title']}</span>
+                    </Link>
+                </div>
             }
         </nav>
     )

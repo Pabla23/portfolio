@@ -24,7 +24,7 @@ function Home({restData, isLoaded}) {
   return (
     isLoaded ?
       <section className="home" id="home" data-aos="fade-zoom-in" data-aos-easing="ease" data-aos-delay="300" data-aos-offset="0">
-        <div className="home-content">
+        <div className="home-content" role="banner">
           <h1 dangerouslySetInnerHTML={{__html: restData.title.rendered}}></h1>
           <p className="self-intro">{typedText}</p>
         </div>

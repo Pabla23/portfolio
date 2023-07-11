@@ -4,24 +4,6 @@
     animation: slide 90s linear infinite;
 }
 
-@keyframes slide {
-    0% {
-        background-position: 0 0;
-    }
-    25% {
-        background-position: -1920px 0;
-    }
-    50% {
-        background-position: -3840px 0;
-    }
-    75% {
-        background-position: -5760px 0;
-    }
-    100% {
-        background-position: -7680px 0;
-    }
-}
-
 .about-content {
     position: relative;
     h3, h2 {
@@ -82,29 +64,27 @@
         ul {
             padding: 0;
             margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            @include flex-space-around;
             li {
                 position: relative;
                 margin: auto 0.4rem;
                 margin-bottom: 0.6rem;
                 padding: 0.5rem;
-                background-color: var(--color-tertiary);
-                color: var(--color-secondary);
+                background-color: $tertiary;
+                color: $secondary;
                 border-radius: 0.5rem;
                 strong {
                     z-index: 1;
-                    color: var(--color-tertiary);
+                    color: $tertiary;
                     &:after {
-                        background-color: var(--color-quaternary);
+                        background-color: $quaternary;
                         background-image: none;
                         width: 132%;
                         height: 240%;
                         top: -0.784rem;
                         left: -0.68rem;
                         right: 0;
-                        border: solid 2.8px var(--color-tertiary);
+                        border: solid 2.8px $tertiary;
                         border-radius: 0.4rem;
                         z-index: -1;
                     }
@@ -114,7 +94,7 @@
                 bottom: 1%;
                 strong {
                     z-index: 1;
-                    color: var(--color-tertiary);
+                    color: $tertiary;
                     &:after {
                         width: 122%;
                         height: 220%;
@@ -124,17 +104,9 @@
         }
     }
 
-    .design {
-        ul {
-            li {
-                strong {
-                    &:after {
-                        width: 120%;
-                        height: 240%;
-                    }
-                }
-            }
-        }
+    .design ul li strong:after {
+        width: 120%;
+        height: 240%;
     }
 }
 
@@ -143,9 +115,7 @@
         height: 100vh;
     }
     .about-intro {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        @include flex-space-around;
         text-align: center;
         h2 {
             width: 100%;
