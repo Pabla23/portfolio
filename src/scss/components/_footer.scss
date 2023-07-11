@@ -72,10 +72,6 @@ footer {
             height: 7rem;
             margin-top: 1.5rem;
         }
-        p {
-            grid-column: 1;
-            grid-row: 3;
-        }
     }
 }
 
@@ -106,6 +102,16 @@ footer {
         }
         .source-link {
             margin-top: 0.5rem;
+            grid-row: 2;
+            grid-column: 1;
+        }
+        .social-media {
+            grid-row: 1;
+            grid-column: 1;
+        }
+        p {
+            grid-row: 3;
+            grid-column: 1;
         }
     }
 }
