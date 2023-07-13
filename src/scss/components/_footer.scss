@@ -2,6 +2,7 @@ footer {
     padding: 2rem 1.5rem 7.5rem;
     background-color: $tertiary;
     color: $secondary;
+    animation: fadeIn 3s ease;
     p {
         margin: 1.5rem 0 0;
     }
@@ -88,12 +89,12 @@ footer {
         right: 0;
         width: 33.3%;
         z-index: 100;
-        animation: fadeIn 3s ease;
         background-color: transparent;
         .svg-wrapper {
             width: 100%;
             grid-column: 1 / 3;
             @include flex-center;
+            z-index: -1;
         }
         .dilly-svg {
             position: absolute;
