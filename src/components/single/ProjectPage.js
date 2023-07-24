@@ -32,7 +32,6 @@ function ProjectPage() {
     useEffect(() => {
       setKey(prevKey => prevKey + 1);
     }, [slug]);
-    console.log(key);
 
     return (
         <div className="single-project">
@@ -92,6 +91,7 @@ function ProjectPage() {
                             <section className="project-planning">
                               <h2>{project.acf.planning_header}</h2>
                               <div dangerouslySetInnerHTML={{__html: project.acf.project_planning}}></div>
+                              <div dangerouslySetInnerHTML={{__html: project.acf.extra_paragraphv3}}></div>
                             </section> 
                           : null}
 
@@ -99,18 +99,18 @@ function ProjectPage() {
                             <section className="project-functionality">
                               <h2>{project.acf.functionality_header}</h2>
 
-                              {functionality ? functionality.map((item, i) => {
+                              { functionality.map((item, i) => {
                                   return (
                                       <div key={i}>
                                           <h3>{item.function_heading}</h3>
-                                          <p>{item.function_paragraph}</p>
-                                          <a href={item.github_link} target="_blank" rel="noopener noreferrer">
+                                          <div dangerouslySetInnerHTML={{__html: item.function_paragraph}}></div>
+                                          <a className="github-link" href={item.github_link} target="_blank" rel="noopener noreferrer">
                                             View Code
                                             <GithubSVG/>
                                           </a>
                                       </div>
                                   )
-                              }): null}
+                              })}
                             </section>
                           : null}
 

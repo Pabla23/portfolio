@@ -9,6 +9,12 @@
 
 .contact-content {
     text-align: center;
+    .contact-text a {
+        color: $tertiary;
+        &:hover {
+            color: $primary;
+        }
+    }
 }
   
 .btn-primary {

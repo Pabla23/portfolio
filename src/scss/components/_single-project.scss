@@ -113,7 +113,14 @@
     p {
         margin-bottom: 2rem;
     }
-    a {
+    .inline-link {
+        text-decoration: underline;
+        color: $quinary;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .github-link {
         @include buttons;
         &:hover {
             box-shadow: $shadow;

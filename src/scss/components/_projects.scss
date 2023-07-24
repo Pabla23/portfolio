@@ -15,6 +15,10 @@
     }
     a {
         color: $tertiary;
+        transition: color 0.15s ease;
+        &:hover, &:focus, &:active {
+            color: $primary;
+        }
     }
 }
 
